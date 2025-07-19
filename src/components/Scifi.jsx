@@ -2,39 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const scifiImages = [
- 
-  
   '/images/scifi/Scifi3.png',
   '/images/scifi/Scifi4.png',
-  
   '/images/scifi/Scifi6.png',
   '/images/scifi/Scifi7.png',
- 
-'/images/scifi/scifi9.png',
-'/images/scifi/Scifi10.png',
+  '/images/scifi/scifi9.png',
+  '/images/scifi/Scifi10.png',
 ];
-
 
 const eightKWallpapers = [
-  {
-    preview:  '/images/scifi/Scifi1.png', 
-    download: '/images/scifi/8kscifi/Scifi1.png',       
-  },
-  {
-      preview: '/images/scifi/Scifi2.png',  
-    download: '/images/scifi/8kscifi/Scifi2.png', 
-  },
-  {
-      preview:  '/images/scifi/Scifi5.png', 
-    download: '/images/scifi/8kscifi/Scifi5.png', 
-  },
-    {
-      preview: '/images/scifi/Scifi8.png',  
-    download: '/images/scifi/8kscifi/Scifi8.png', 
-  },
- 
+  '/images/scifi/Scifi1.png',
+  '/images/scifi/Scifi2.png',
+  '/images/scifi/Scifi5.png',
+  '/images/scifi/Scifi8.png',
 ];
-
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -105,38 +86,39 @@ const Scifi = () => {
         ))}
       </div>
 
-        {/* 8K Section */}
-<h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K SCIFI WALLPAPERS</h2>
+      {/* 8K Section */}
+      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K SCIFI WALLPAPERS</h2>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
-  {eightKWallpapers.map(({ preview, download }, idx) => (
-    <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
-      <img src={preview} alt={`8k-preview-${idx}`} className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
-      <div className="flex justify-center p-4">
-        <a href={download} download className="relative px-5 py-2 bg-white text-black text-xs font-mono uppercase tracking-wide group overflow-hidden"
-          style={{ clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)' }}>
-          <span className="relative z-10">Download in 8K</span>
-          <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-        </a>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
+        {eightKWallpapers.map((src, idx) => (
+          <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <img
+              src={src}
+              alt={`8k-scifi-${idx}`}
+              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
 
+      {/* Full 8K Bundle Download */}
       <div className="flex justify-center">
-        <motion.button
+        <motion.a
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          href="https://harshared.lemonsqueezy.com/buy/a1783f99-2f36-4373-963c-8a0c47a1aa38" // Replace with actual Lemon Squeezy link
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative px-6 py-2 bg-white text-black font-mono text-sm tracking-wide uppercase group overflow-hidden"
           style={{
             clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)',
           }}
         >
-          <span className="relative z-10">Explore More</span>
+          <span className="relative z-10">Download Full 8K Bundle</span>
           <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-        </motion.button>
+        </motion.a>
       </div>
     </section>
   );

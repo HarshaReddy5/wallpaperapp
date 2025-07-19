@@ -9,29 +9,12 @@ const animalImages = [
 ];
 
 const eightKWallpapers = [
-  {
-    preview:   '/images/animals/animal3.png', 
-    download: '/images/animals/8kanimals/animal3.png',       
-  },
-  {
-      preview:  '/images/animals/animal4.png', 
-    download: '/images/animals/8kanimals/animal4.png',
-  },
-  {
-      preview:   '/images/animals/animal5.png', 
-    download: '/images/animals/8kanimals/animal5.png',
-  },
-    {
-      preview:   '/images/animals/animal6.png',  
-     download: '/images/animals/8kanimals/animal6.png',
-  },
-    {
-      preview:   '/images/animals/animal8.png',
-     download: '/images/animals/8kanimals/animal8.png',
-  },
-
+  '/images/animals/animal3.png',
+  '/images/animals/animal4.png',
+  '/images/animals/animal5.png',
+  '/images/animals/animal6.png',
+  '/images/animals/animal8.png',
 ];
-
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -70,16 +53,12 @@ const Animals = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
         {animalImages.map((src, idx) => (
           <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
-            {/* Image */}
             <img
               src={src}
               alt={`animal-${idx}`}
               className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
             />
-
-            {/* Buttons below image */}
             <div className="flex flex-col sm:flex-row justify-center gap-4 p-4">
-              {/* Download Button */}
               <a
                 href={src}
                 download
@@ -91,8 +70,6 @@ const Animals = () => {
                 <span className="relative z-10">Download</span>
                 <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
               </a>
-
-              {/* Share Button */}
               <button
                 onClick={() => handleShare(src)}
                 className="relative px-5 py-2 bg-white text-black text-xs font-mono uppercase tracking-wide group overflow-hidden"
@@ -108,39 +85,39 @@ const Animals = () => {
         ))}
       </div>
 
-  {/* 8K Section */}
-<h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K ANIMAL WALLPAPERS</h2>
+      {/* 8K Section */}
+      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K ANIMAL WALLPAPERS</h2>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
-  {eightKWallpapers.map(({ preview, download }, idx) => (
-    <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
-      <img src={preview} alt={`8k-preview-${idx}`} className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
-      <div className="flex justify-center p-4">
-        <a href={download} download className="relative px-5 py-2 bg-white text-black text-xs font-mono uppercase tracking-wide group overflow-hidden"
-          style={{ clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)' }}>
-          <span className="relative z-10">Download in 8K</span>
-          <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-        </a>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
+        {eightKWallpapers.map((src, idx) => (
+          <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <img
+              src={src}
+              alt={`8k-animal-${idx}`}
+              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
 
-      {/* Centered Explore More Button */}
+      {/* Download 8K Bundle Button */}
       <div className="flex justify-center">
-        <motion.button
+        <motion.a
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          href="https://harshared.lemonsqueezy.com/buy/dc61de8e-9eb2-4ee1-858f-2d1f5f443192" // Replace with actual bundle link
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative px-6 py-2 bg-white text-black font-mono text-sm tracking-wide uppercase group overflow-hidden"
           style={{
             clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)',
           }}
         >
-          <span className="relative z-10">Explore More</span>
+          <span className="relative z-10">Download Full 8K Bundle</span>
           <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-        </motion.button>
+        </motion.a>
       </div>
     </section>
   );

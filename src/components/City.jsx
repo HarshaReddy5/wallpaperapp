@@ -7,30 +7,12 @@ const cityImages = [
 ];
 
 const eightKWallpapers = [
-  {
-    preview:  '/images/city/city2.jpg', 
-    download: '/images/city/city8k/city2.png',       
-  },
-  {
-      preview:    '/images/city/city3.jpg', 
-     download: '/images/city/city8k/city3.png', 
-  },
-  {
-      preview:    '/images/city/city4.jpg', 
-     download: '/images/city/city8k/city4.png', 
-  },
-    {
-      preview:  '/images/city/city6.jpg',  
-    download: '/images/city/city8k/city6.png', 
-  },
-
-     {
-      preview:  '/images/city/city8.jpg',  
-    download: '/images/city/city8k/city8.png', 
-  },
- 
+  { preview: '/images/city/city2.jpg' },
+  { preview: '/images/city/city3.jpg' },
+  { preview: '/images/city/city4.jpg' },
+  { preview: '/images/city/city6.jpg' },
+  { preview: '/images/city/city8.jpg' },
 ];
-
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -68,11 +50,12 @@ const City = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
         {cityImages.map((src, idx) => (
-          <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+          <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
             <img
               src={src}
               alt={`city-${idx}`}
               className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
             />
             <div className="flex flex-col sm:flex-row justify-center gap-4 p-4">
               <a
@@ -101,38 +84,39 @@ const City = () => {
         ))}
       </div>
 
-        {/* 8K Section */}
-<h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K GAMING WALLPAPERS</h2>
+      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K CITY WALLPAPERS</h2>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
-  {eightKWallpapers.map(({ preview, download }, idx) => (
-    <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
-      <img src={preview} alt={`8k-preview-${idx}`} className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
-      <div className="flex justify-center p-4">
-        <a href={download} download className="relative px-5 py-2 bg-white text-black text-xs font-mono uppercase tracking-wide group overflow-hidden"
-          style={{ clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)' }}>
-          <span className="relative z-10">Download in 8K</span>
-          <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-        </a>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
+        {eightKWallpapers.map(({ preview }, idx) => (
+          <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
+            <img
+              src={preview}
+              alt={`8k-city-${idx}`}
+              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
 
-      <div className="flex justify-center">
-        <motion.button
+      {/* ✅ Full 8K Bundle Download Button */}
+      <div className="flex justify-center mt-10">
+        <motion.a
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          href="https://harshared.lemonsqueezy.com/buy/985b9ed2-fdcc-4db4-82ef-d2dcb34866ce" // Replace with actual Lemon Squeezy link
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative px-6 py-2 bg-white text-black font-mono text-sm tracking-wide uppercase group overflow-hidden"
           style={{
             clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)',
           }}
         >
-          <span className="relative z-10">Explore More</span>
+          <span className="relative z-10">Download Full 8K Bundle</span>
           <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-        </motion.button>
+        </motion.a>
       </div>
     </section>
   );

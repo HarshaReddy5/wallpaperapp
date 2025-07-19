@@ -22,6 +22,7 @@ const eightKWallpapers = [
   {
     preview: '/images/cars/car5.png',
     download: '/images/cars/cars8k/car5.png',
+       checkout: 'https://harshared.lemonsqueezy.com/buy/b594cd63-e2f7-4f03-871d-ff0d627438e9',
   },
   {
     preview: '/images/cars/car6.png',
@@ -30,11 +31,12 @@ const eightKWallpapers = [
   {
     preview: '/images/cars/car8.png',
     download: '/images/cars/cars8k/car8.png',
-    checkout: 'https://harshared.lemonsqueezy.com/checkout',
+    checkout: 'https://harshared.lemonsqueezy.com/buy/45f847ad-667b-460b-ae59-176015de417d',
   },
   {
     preview: '/images/cars/car9.png',
     download: '/images/cars/cars8k/car9.png',
+    checkout: 'https://harshared.lemonsqueezy.com/buy/393a5f43-97ad-4ecb-846e-fb1565bf5340',
   },
   {
     preview: '/images/cars/car10.png',

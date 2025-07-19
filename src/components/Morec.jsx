@@ -27,7 +27,7 @@ const Morec = () => {
       {/* Heading and Button */}
       <div className="flex justify-between items-center mb-16 flex-col md:flex-row gap-6">
         <motion.h2
-          className="text-4xl md:text-7xl font-bold"
+          className="text-4xl text-center md:text-left  md:text-7xl font-bold"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

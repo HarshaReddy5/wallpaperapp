@@ -49,7 +49,7 @@ export const Hero = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-6xl md:text-9xl font-extrabold mix-blend-overlay text-white">
+            <h1 className="text-6xl text-center md:text-9xl font-extrabold mix-blend-overlay text-white">
               WALLPAPER AREA
             </h1>
           </div>
@@ -57,7 +57,7 @@ export const Hero = () => {
 
         {/* Parallax */}
         <div className="bg-black">
-          <div className="w-[80%] mx-auto">
+          <div className="w-[80%] h-[100vh] mx-auto">
             <Parallax bgImage={HeroImage} strength={400}>
               <div className="h-screen flex items-center justify-center rounded-xl overflow-hidden" />
             </Parallax>

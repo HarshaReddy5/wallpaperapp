@@ -66,24 +66,25 @@ const Sport = () => {
               className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
             />
             <div className="flex flex-col sm:flex-row justify-center gap-4 p-4">
-              <a
-                href={src}
-                download
-                className="relative px-5 py-2 bg-white text-black text-xs  uppercase tracking-wide group overflow-hidden"
-                style={{ clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)' }}
-              >
-                <span className="relative z-10">Download</span>
-                <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-              </a>
+            {/* Download Button */}
+<a
+  href={src}
+  download
+  className="relative px-5 py-2 bg-white text-black text-xs uppercase tracking-wide group overflow-hidden text-center"
+>
+  <span className="relative z-10 block w-full text-center">Download</span>
+  <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
+</a>
 
-              <button
-                onClick={() => handleShare(src)}
-                className="relative px-5 py-2 bg-white text-black text-xs  uppercase tracking-wide group overflow-hidden"
-                style={{ clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)' }}
-              >
-                <span className="relative z-10">Share</span>
-                <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-              </button>
+{/* Share Button */}
+<button
+  onClick={() => handleShare(src)}
+  className="relative px-5 py-2 bg-white text-black text-xs uppercase tracking-wide group overflow-hidden text-center"
+>
+  <span className="relative z-10 block w-full text-center">Share</span>
+  <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
+</button>
+
             </div>
           </div>
         ))}
@@ -114,7 +115,7 @@ const Sport = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="relative px-6 py-2 bg-white text-black  text-sm tracking-wide uppercase group overflow-hidden"
-          style={{ clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)' }}
+       
         >
           <span className="relative z-10">Download Full 8K Bundle</span>
           <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />

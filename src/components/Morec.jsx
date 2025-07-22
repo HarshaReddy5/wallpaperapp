@@ -42,9 +42,7 @@ const Morec = () => {
           whileInView="visible"
           viewport={{ once: true }}
           className="relative px-6 py-2 bg-white text-black text-sm tracking-wide uppercase group overflow-hidden"
-          style={{
-            clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)',
-          }}
+        
         >
           <span className="relative z-10">Explore More</span>
           <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />

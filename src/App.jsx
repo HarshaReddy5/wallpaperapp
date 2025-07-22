@@ -22,16 +22,7 @@ import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
-  // Disable right click
-  useEffect(() => {
-    const disableRightClick = (e) => e.preventDefault();
-    window.addEventListener('contextmenu', disableRightClick);
-
-    return () => {
-      window.removeEventListener('contextmenu', disableRightClick);
-    };
-  }, []);
-
+ 
   return (
     <div className="app bg-black">
       <NavBar />

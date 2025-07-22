@@ -22,10 +22,10 @@ const Subscription = () => {
                 {/* Preview Images */}
 <div className="flex space-x-2 mb-6">
   <div className="w-40 h-28 sm:w-28 sm:h-20 overflow-hidden rounded">
-    <img src="/images/mountain/m4.png" alt="Preview 1" className="w-full h-full object-cover" />
+    <img src="/images/mountain/m4.webp" alt="Preview 1" className="w-full h-full object-cover" />
   </div>
   <div className="w-40 h-28 sm:w-28 sm:h-20 overflow-hidden rounded">
-    <img src="/images/cars/car5.png" alt="Preview 2" className="w-full h-full object-cover" />
+    <img src="/images/cars/car5.webp" alt="Preview 2" className="w-full h-full object-cover" />
   </div>
   <div className="w-40 h-28 sm:w-28 sm:h-20 overflow-hidden rounded">
     <img src="/images/anime/anime6.webp" alt="Preview 3" className="w-full h-full object-cover" />
@@ -56,7 +56,7 @@ const Subscription = () => {
        {/* Preview Images */}
 <div className="flex space-x-2 mb-6">
   <div className="w-40 h-28 sm:w-28 sm:h-20 overflow-hidden rounded">
-    <img src="/images/mountain/m6.png" alt="Preview 1" className="w-full h-full object-cover" />
+    <img src="/images/mountain/m6.webp" alt="Preview 1" className="w-full h-full object-cover" />
   </div>
   <div className="w-40 h-28 sm:w-28 sm:h-20 overflow-hidden rounded">
     <img src="/images/cars/car1.webp" alt="Preview 2" className="w-full h-full object-cover" />

@@ -34,23 +34,19 @@ const Request = () => {
       {/* Button */}
       <motion.button
         className="relative px-6 py-2 bg-white text-black  text-sm tracking-wide uppercase group overflow-hidden mb-14"
-        style={{
-          clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)',
-        }}
+       
         variants={fadeUp}
         initial="hidden"
         animate={controls}
       >
-        <span className="relative z-10">Contact Now*</span>
+        <span className="relative z-10">Contact Now </span>
         <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
       </motion.button>
 
       {/* Image */}
       <motion.div
         className="mx-auto mb-10 w-[320px] md:w-[400px] h-[450px] overflow-hidden"
-        style={{
-          clipPath: 'polygon(0 0, 100% 0, 100% 92%, 92% 100%, 0 100%)',
-        }}
+      
         variants={fadeUp}
         initial="hidden"
         animate={controls}

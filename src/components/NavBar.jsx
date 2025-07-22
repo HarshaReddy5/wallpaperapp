@@ -93,19 +93,21 @@ const NavBar = () => {
 
       {/* Mobile dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md px-4 pb-4 space-y-4">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full px-4 py-2 border border-[#ff7300] rounded-full focus:outline-none focus:ring-1 focus:ring-[#ff7300]"
-          />
-          <button
-            onClick={() => navigate('/subscribe')}
-            className="w-full py-2 bg-black text-white font-mono text-sm uppercase rounded-full hover:bg-[#ff7300] transition"
-          >
-            Subscribe
-          </button>
-        </div>
+  <div className="md:hidden bg-white shadow-md px-4 pb-4 pt-6 space-y-4">
+    <input
+      type="text"
+      placeholder="Search..."
+      className="w-full px-4 py-2 border border-[#ff7300] focus:outline-none focus:ring-1 focus:ring-[#ff7300]"
+    />
+    <button
+      onClick={() => console.log('Search triggered')} // replace with actual search handler if needed
+      className="w-full py-2 bg-black text-white font-mono text-sm uppercase  hover:bg-[#ff7300] transition"
+    >
+      Search
+    </button>
+  </div>
+
+
       )}
     </nav>
   );

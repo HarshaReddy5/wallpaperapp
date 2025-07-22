@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
-import StickyCategoryBar from './components/StickyCategoryBar';
+import { useLocation } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
+import ReactGA from 'react-ga4';
+
+import StickyCategoryBar from './components/StickyCategoryBar';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import Morec from './components/Morec';
@@ -19,14 +22,26 @@ import City from './components/City';
 import Subscription from './components/Subscription';
 import Spiderman from './components/Spiderman';
 import ScrollToTop from './components/ScrollToTop';
+
 import './App.css';
 
+// ✅ Google Analytics page tracking hook
+function usePageTracking() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: 'pageview', page: location.pathname });
+  }, [location]);
+}
+
 function App() {
- 
+  usePageTracking();
+
   return (
     <div className="app bg-black">
       <NavBar />
       <ScrollToTop />
+
       <Routes>
         <Route
           path="/"
@@ -52,9 +67,11 @@ function App() {
         <Route path="/spiderman" element={<Spiderman />} />
         <Route path="/city" element={<City />} />
       </Routes>
+
       <StickyCategoryBar />
     </div>
   );
 }
 
 export default App;
+  

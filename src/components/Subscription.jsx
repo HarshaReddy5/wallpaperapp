@@ -17,7 +17,7 @@ const Subscription = () => {
           <p className="mb-6 text-gray-300">
             Get instant access to all currently available 8K wallpapers in one downloadable bundle.
           </p>
-          <p className="text-xl font-semibold mb-4">₹849 One-Time</p>
+          <p className="text-xl font-semibold mb-4">10$ One-Time</p>
 
                 {/* Preview Images */}
 <div className="flex space-x-2 mb-6">
@@ -34,10 +34,8 @@ const Subscription = () => {
 
           <a
             href="https://your-lemonsqueezy-link-bundle"
-            className="relative px-6 py-2 bg-white text-black font-mono text-sm tracking-wide uppercase group overflow-hidden"
-            style={{
-              clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)',
-            }}
+            className="relative px-6 py-2 bg-white text-black  text-sm tracking-wide uppercase group overflow-hidden"
+         
           >
             <span className="relative z-10">Get Bundle</span>
             <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
@@ -50,7 +48,7 @@ const Subscription = () => {
           <p className="mb-6 text-gray-300">
             Unlock access to all current and future 8K wallpapers — forever.
           </p>
-          <p className="text-xl font-semibold mb-4">₹1659 One-Time</p>
+          <p className="text-xl font-semibold mb-4">20$ One-Time</p>
 
       
        {/* Preview Images */}
@@ -69,10 +67,8 @@ const Subscription = () => {
 
           <a
             href="https://your-lemonsqueezy-link-lifetime"
-            className="relative px-6 py-2 bg-white text-black font-mono text-sm tracking-wide uppercase group overflow-hidden"
-            style={{
-              clipPath: 'polygon(8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%, 0 8%)',
-            }}
+            className="relative px-6 py-2 bg-white text-black  text-sm tracking-wide uppercase group overflow-hidden"
+        
           >
             <span className="relative z-10">Get Lifetime Access</span>
             <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />

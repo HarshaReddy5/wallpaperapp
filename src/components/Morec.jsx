@@ -7,7 +7,7 @@ const categories = [
   { number: '//2', title: 'ANIME', image: '/images/anime/anime.webp', path: '/anime' },
   { number: '//3', title: '3D ABSTRACT', image: '/images/abstract/abstract.webp', path: '/abstract' },
   { number: '//4', title: 'TECHNOLOGY', image: '/images/futuristic/tech.webp', path: '/technology' },
-  { number: '//5', title: 'GAMING', image: '/images/gaming/gaming.webp', path: '/gaming' },
+  { number: '//5', title: 'GAMING', image: '/images/gaming/gaming2.webp', path: '/gaming' },
   { number: '//6', title: 'SPORT', image: '/images/sport/sport.webp', path: '/sport' },
   { number: '//7', title: 'SPACE', image: '/images/space/space.webp', path: '/space' },
 ];

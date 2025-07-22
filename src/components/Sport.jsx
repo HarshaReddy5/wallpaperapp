@@ -1,25 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const sportImages = [
-  '/images/sport/sport.webp',
-  '/images/sport/sport5.webp',
-  '/images/sport/sport6.webp',
-  '/images/sport/sport8.webp',
+const sportWallpapers = [
+  { name: 'sport', ext: 'png' },
+  { name: 'sport5', ext: 'png' },
+  { name: 'sport6', ext: 'png' },
+  { name: 'sport8', ext: 'png' },
 ];
 
 const eightKWallpapers = [
-  { preview: '/images/sport/sport2.webp' },
-  { preview: '/images/sport/sport3.webp' },
-  { preview: '/images/sport/sport4.webp' },
-  { preview: '/images/sport/sport7.webp' },
-  { preview: '/images/sport/sport9.webp' },
-  { preview: '/images/sport/sport10.webp' },
-  { preview: '/images/sport/sport11.webp' },
-  { preview: '/images/sport/sport12.webp' },
-  { preview: '/images/sport/sport13.webp' },
-  { preview: '/images/sport/sport14.webp' },
-  { preview: '/images/sport/sport15.webp' },
+  'sport2',
+  'sport3',
+  'sport4',
+  'sport7',
+  'sport9',
+  'sport10',
+  'sport11',
+  'sport12',
+  'sport13',
+  'sport14',
+  'sport15',
 ];
 
 const fadeUp = {
@@ -58,45 +58,46 @@ const Sport = () => {
 
       {/* Regular Wallpapers */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
-        {sportImages.map((src, idx) => (
-          <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
-            <img
-              src={src}
-              alt={`sport-${idx}`}
-              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-            />
-            <div className="flex flex-col sm:flex-row justify-center gap-4 p-4">
-            {/* Download Button */}
-<a
-  href={src}
-  download
-  className="relative px-5 py-2 bg-white text-black text-xs uppercase tracking-wide group overflow-hidden text-center"
->
-  <span className="relative z-10 block w-full text-center">Download</span>
-  <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-</a>
+        {sportWallpapers.map(({ name, ext }, idx) => {
+          const webpSrc = `/images/sport/${name}.webp`;
+          const downloadSrc = `/images/sport/${name}.${ext}`;
 
-{/* Share Button */}
-<button
-  onClick={() => handleShare(src)}
-  className="relative px-5 py-2 bg-white text-black text-xs uppercase tracking-wide group overflow-hidden text-center"
->
-  <span className="relative z-10 block w-full text-center">Share</span>
-  <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-</button>
-
+          return (
+            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+              <img
+                src={webpSrc}
+                alt={name}
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <div className="flex flex-col sm:flex-row justify-center gap-4 p-4">
+                <a
+                  href={downloadSrc}
+                  download
+                  className="relative px-5 py-2 bg-white text-black text-xs uppercase tracking-wide group overflow-hidden text-center"
+                >
+                  <span className="relative z-10 block w-full text-center">Download</span>
+                  <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
+                </a>
+                <button
+                  onClick={() => handleShare(downloadSrc)}
+                  className="relative px-5 py-2 bg-white text-black text-xs uppercase tracking-wide group overflow-hidden text-center"
+                >
+                  <span className="relative z-10 block w-full text-center">Share</span>
+                  <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* 8K Section */}
       <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K SPORT WALLPAPERS</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
-        {eightKWallpapers.map(({ preview }, idx) => (
+        {eightKWallpapers.map((name, idx) => (
           <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
             <img
-              src={preview}
+              src={`/images/sport/${name}.webp`}
               alt={`8k-sport-${idx}`}
               className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
             />
@@ -104,18 +105,17 @@ const Sport = () => {
         ))}
       </div>
 
-      {/* Bundle Button (Optional) */}
+      {/* Full 8K Bundle CTA */}
       <div className="flex justify-center">
         <motion.a
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          href="https://harshared.lemonsqueezy.com/buy/43969516-3d7d-4dd2-a85f-b15516f9098d" // Replace with your actual Lemon Squeezy bundle link
+          href="https://harshared.lemonsqueezy.com/buy/43969516-3d7d-4dd2-a85f-b15516f9098d" // ✅ Correct Sport category bundle
           target="_blank"
           rel="noopener noreferrer"
-          className="relative px-6 py-2 bg-white text-black  text-sm tracking-wide uppercase group overflow-hidden"
-       
+          className="relative px-6 py-2 bg-white text-black text-sm tracking-wide uppercase group overflow-hidden"
         >
           <span className="relative z-10">Download Full 8K Bundle</span>
           <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />

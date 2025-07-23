@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Menu, X, Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -23,9 +22,8 @@ const NavBar = () => {
       setTime(formatted);
     };
 
-    updateClock(); // set immediately
+    updateClock();
     const interval = setInterval(updateClock, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -33,8 +31,16 @@ const NavBar = () => {
     <nav className="bg-black/50 backdrop-blur-md shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          {/* Clock */}
-          <div className="text-white font-mono text-sm hidden md:block">{time}</div>
+          
+          {/* Logo + Clock */}
+          <div className="flex items-center space-x-4">
+            <img
+              src="/Logo.png" 
+              alt="Logo"
+              className="h-10 w-auto"
+            />
+            <div className="text-white font-mono text-sm hidden md:block">{time}</div>
+          </div>
 
           {/* Search + Button Container */}
           <div className="flex items-center space-x-4 ml-auto">
@@ -48,11 +54,11 @@ const NavBar = () => {
                 <input
                   type="text"
                   placeholder="Search..."
-                  className="w-full px-4 py-2 border border-[#ff7300] rounded-full focus:outline-none focus:ring-1 focus:ring-[#ff7300] transition-all duration-300"
+                  className="w-full px-4 py-2 border border-[#ff7300] bg-black text-white placeholder-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-[#ff7300] transition-all duration-300"
                 />
                 <Search
                   size={18}
-                  className="absolute right-3 top-2.5 text-[#ffffff] cursor-pointer"
+                  className="absolute right-3 top-2.5 text-white cursor-pointer"
                   onClick={() => setShowSearch(false)}
                 />
               </div>
@@ -60,7 +66,7 @@ const NavBar = () => {
               {!showSearch && (
                 <Search
                   size={22}
-                  className="text-[#ffffff] hover:text-[#ff7300] cursor-pointer transition-all duration-300"
+                  className="text-white hover:text-[#ff7300] cursor-pointer transition-all duration-300"
                   onClick={() => setShowSearch(true)}
                 />
               )}
@@ -69,10 +75,7 @@ const NavBar = () => {
             {/* Subscribe Button */}
             <button
               onClick={() => navigate('/subscribe')}
-              className="relative px-6 py-2 bg-white text-black text-xs tracking-wide uppercase group overflow-hidden"
-              style={{
-               
-              }}
+              className="relative px-5 py-2 bg-white text-black text-xs tracking-wide uppercase group overflow-hidden"
             >
               <span className="relative z-10">Subscribe</span>
               <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
@@ -91,23 +94,21 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile Dropdown */}
       {isOpen && (
-  <div className="md:hidden bg-white shadow-md px-4 pb-4 pt-6 space-y-4">
-    <input
-      type="text"
-      placeholder="Search..."
-      className="w-full px-4 py-2 border border-[#ff7300] focus:outline-none focus:ring-1 focus:ring-[#ff7300]"
-    />
-    <button
-      onClick={() => console.log('Search triggered')} // replace with actual search handler if needed
-      className="w-full py-2 bg-black text-white font-mono text-sm uppercase  hover:bg-[#ff7300] transition"
-    >
-      Search
-    </button>
-  </div>
-
-
+        <div className="md:hidden bg-white shadow-md px-4 pb-4 pt-6 space-y-4">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full px-4 py-2 border border-[#ff7300] focus:outline-none focus:ring-1 focus:ring-[#ff7300]"
+          />
+          <button
+            onClick={() => console.log('Search triggered')}
+            className="w-full py-2 bg-black text-white font-mono text-sm uppercase hover:bg-[#ff7300] transition"
+          >
+            Search
+          </button>
+        </div>
       )}
     </nav>
   );

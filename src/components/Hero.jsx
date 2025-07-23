@@ -60,7 +60,7 @@ export const Hero = () => {
 
   return (
     <div className="bg-black">
-      {/* Landing Image Section */}
+      {/* Hero Landing Section */}
       <motion.div
         className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden"
         style={{
@@ -73,7 +73,6 @@ export const Hero = () => {
         animate="visible"
         variants={fadeInUp}
       >
-        {/* Gradient Animation */}
         <div
           ref={gradientRef}
           className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
@@ -94,17 +93,16 @@ export const Hero = () => {
             transitionSpeed={1500}
             scale={1.02}
           >
-            <h1 className="text-white text-4xl md:text-9xl font-bold">
+            <h1 className="text-white text-4xl md:text-8xl font-bold">
               8K WALLPAPER AREA
             </h1>
-            <h2 className="text-white text-md md:text-xl font-light mt-4 max-w-3xl mx-auto">
+            <h2 className="text-white text-base md:text-xl font-light mt-4 max-w-3xl mx-auto">
               Explore handpicked 8K wallpapers for car lovers, anime fans, and gamers alike.
               High-res. No fluff. Pure fire for your setup.
             </h2>
           </Tilt>
         </div>
 
-        {/* Scroll Arrow */}
         <motion.div
           initial={{ y: 0 }}
           animate={{ y: [0, 10, 0] }}
@@ -115,22 +113,20 @@ export const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* Parallax Section */}
-      <motion.div
-        className="bg-black"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      {/* Parallax Section (Fixed Scroll Glitch) ✅ */}
+      <div className="bg-black">
         <div className="w-[90%] mx-auto">
-          <Parallax bgImage={HeroParallax} strength={400}>
-            <div className="h-[70vh] sm:h-[90vh] md:h-[100vh] flex items-center justify-center rounded-xl overflow-hidden" />
+          <Parallax
+            bgImage={HeroParallax}
+            strength={300}
+            bgImageStyle={{ objectFit: 'cover' }}
+          >
+            <div className="h-[90vh] sm:h-[85vh] lg:h-[80vh]" />
           </Parallax>
         </div>
-      </motion.div>
+      </div>
 
-      {/* Spiderman Bundle CTA */}
+      {/* CTA Button */}
       <motion.div
         className="flex justify-center mt-10"
         initial="hidden"
@@ -139,10 +135,7 @@ export const Hero = () => {
         variants={fadeInUp}
       >
         <Link to="/spiderman">
-          <button
-            className="relative px-6 py-2 bg-white text-black text-sm tracking-wide uppercase group overflow-hidden"
-        
-          >
+          <button className="relative px-4 py-1.5 bg-white text-black text-sm sm:text-base tracking-wide uppercase group overflow-hidden ">
             <span className="relative z-10">Checkout Spiderman Bundle</span>
             <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
           </button>
@@ -150,7 +143,7 @@ export const Hero = () => {
       </motion.div>
 
       {/* Featured Wallpapers */}
-      <div className="bg-black w-full text-center mt-[100px]">
+      <div className="bg-black w-full text-center mt-20">
         <motion.h1
           ref={ref}
           initial="hidden"
@@ -162,7 +155,7 @@ export const Hero = () => {
         </motion.h1>
       </div>
 
-      {/* Image Grid */}
+      {/* Wallpaper Grid */}
       <section className="bg-black py-12 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {imageData.map((item, index) => {
@@ -179,8 +172,7 @@ export const Hero = () => {
                   <div
                     className="relative group overflow-hidden transition-transform duration-300 cursor-pointer"
                     style={{
-                      clipPath:
-                        'polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 7%)',
+                      clipPath: 'polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 7%)',
                     }}
                   >
                     <img

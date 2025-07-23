@@ -21,7 +21,10 @@ import Scifi from "./components/Scifi";
 import City from './components/City';
 import Subscription from './components/Subscription';
 import Spiderman from './components/Spiderman';
+import DemoShowcase from './components/DemoShowcase';
 import ScrollToTop from './components/ScrollToTop';
+import CircularScroll from './components/CircularScroll';
+import Bundles from './components/Bundles';
 
 import './App.css';
 
@@ -48,6 +51,10 @@ function App() {
           element={
             <>
               <Hero />
+                  <DemoShowcase />
+                  
+      <CircularScroll />
+   
               <Morec />
               <Request />
             </>
@@ -66,6 +73,7 @@ function App() {
         <Route path="/futuristic" element={<Scifi />} />
         <Route path="/spiderman" element={<Spiderman />} />
         <Route path="/city" element={<City />} />
+           <Route path="/bundles" element={<Bundles />} />
       </Routes>
 
       <StickyCategoryBar />

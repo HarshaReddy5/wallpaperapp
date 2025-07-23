@@ -4,20 +4,18 @@ const Subscription = () => {
   return (
     <div className="min-h-screen bg-black text-white py-12 px-4">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Choose Your Subscription</h1>
-        <p className="text-gray-400 text-lg">
-          Access stunning 8K wallpapers — either as a one-time bundle or get lifetime access to all future additions.
-        </p>
+        <h1 className="text-4xl font-bold mb-4">CHOOSE YOUR BUNDLE</h1>
+   
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {/* Current Bundle */}
-        <div className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col items-center text-center">
+        <div className="bg-white/5  p-8 flex flex-col items-center text-center">
           <h2 className="text-2xl font-bold mb-4">Current 8K Bundle</h2>
           <p className="mb-6 text-gray-300">
-            Get instant access to all currently available 8K wallpapers in one downloadable bundle.
+            Get instant access to all 8K wallpapers in downloadable bundle
           </p>
-          <p className="text-xl font-semibold mb-4">10$ One-Time</p>
+          <p className="text-xl font-semibold mb-4">8$ One-Time</p>
 
                 {/* Preview Images */}
 <div className="flex space-x-2 mb-6">
@@ -33,7 +31,7 @@ const Subscription = () => {
 </div>
 
           <a
-            href="https://your-lemonsqueezy-link-bundle"
+            href="https://harshared.lemonsqueezy.com/buy/b087bb72-ea00-450a-885f-c8080a3049c8"
             className="relative px-6 py-2 bg-white text-black  text-sm tracking-wide uppercase group overflow-hidden"
          
           >
@@ -42,13 +40,13 @@ const Subscription = () => {
           </a>
         </div>
 
-        {/* Lifetime Access */}
-        <div className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col items-center text-center">
-          <h2 className="text-2xl font-bold mb-4">Lifetime Access</h2>
+   
+        <div className="bg-white/5 p-8 flex flex-col items-center text-center">
+          <h2 className="text-2xl font-bold mb-4">8K Bundle V2</h2>
           <p className="mb-6 text-gray-300">
-            Unlock access to all current and future 8K wallpapers — forever.
+          Get instant access to all 8K wallpapers in downloadable bundle V2. coming soon...
           </p>
-          <p className="text-xl font-semibold mb-4">20$ One-Time</p>
+          <p className="text-xl font-semibold mb-4">8$ One-Time</p>
 
       
        {/* Preview Images */}
@@ -66,11 +64,11 @@ const Subscription = () => {
 
 
           <a
-            href="https://your-lemonsqueezy-link-lifetime"
+            href=""
             className="relative px-6 py-2 bg-white text-black  text-sm tracking-wide uppercase group overflow-hidden"
         
           >
-            <span className="relative z-10">Get Lifetime Access</span>
+            <span className="relative z-10">Get Bundle</span>
             <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
           </a>
         </div>

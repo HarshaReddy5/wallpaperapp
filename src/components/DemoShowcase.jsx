@@ -58,12 +58,12 @@ const DemoButton = styled(motion.a)`
 
   @media (max-width: 768px) {
     padding: 0.3rem 0.8rem;
-    font-size: 0.7rem;
+    font-size: 0.875rem;
   }
 
   @media (max-width: 480px) {
-    padding: 0.25rem 0.6rem;
-    font-size: 0.65rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.875rem;
   }
 `;
 
@@ -93,7 +93,7 @@ const DemoShowcase = () => {
     const updateRadius = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 480) {
-        setRadius(160);
+        setRadius(150);
       } else if (screenWidth < 768) {
         setRadius(220);
       } else {

@@ -12,7 +12,7 @@ const regularGamingWallpapers = [
 
 const eightKGamingWallpapers = [
   'gaming13', 'gaming14', 'gaming8', 'gaming9',
-  'gaming10', 'gaming11', 'gaming5',
+  'gaming10', 'gaming11', 'gaming5','gaming16','gaming17','gaming18','gaming19','gaming20','gaming21','gaming22','gaming123','gaming24','gaming25','gaming26','gaming27'
 ];
 
 const fadeUp = {

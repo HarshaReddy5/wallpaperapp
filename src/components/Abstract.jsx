@@ -75,7 +75,7 @@ const Abstract = () => {
       </div>
 
       {/* 8K Abstract Wallpapers */}
-      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K ABSTRACT WALLPAPERS</h2>
+     
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
         {abstract8KImageNames.map((name, idx) => {
@@ -92,22 +92,7 @@ const Abstract = () => {
         })}
       </div>
 
-      {/* Full 8K Bundle Download */}
-      <div className="flex justify-center">
-        <motion.a
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative px-6 py-2 bg-white text-black text-sm tracking-wide uppercase group overflow-hidden"
-        >
-          <span className="relative z-10">Download Full 8K Bundle</span>
-          <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-        </motion.a>
-      </div>
+     
     </section>
   );
 };

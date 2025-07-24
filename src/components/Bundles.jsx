@@ -85,19 +85,42 @@ const Bundles = () => {
   }, []);
 
   useEffect(() => {
-    const el = scrollContainerRef.current;
-    if (!el) return;
+  const el = scrollContainerRef.current;
+  if (!el) return;
 
-    const handleWheel = (e) => {
-      e.preventDefault();
-      let newX = x.get() - e.deltaY * 1.5;
-      newX = Math.max(-maxScroll, Math.min(0, newX));
-      x.set(newX);
-    };
+  let startX = 0;
+  let currentX = 0;
 
-    el.addEventListener("wheel", handleWheel, { passive: false });
-    return () => el.removeEventListener("wheel", handleWheel);
-  }, [x, maxScroll]);
+  const handleWheel = (e) => {
+    e.preventDefault();
+    let newX = x.get() - e.deltaY * 1.5;
+    newX = Math.max(-maxScroll, Math.min(0, newX));
+    x.set(newX);
+  };
+
+  const handleTouchStart = (e) => {
+    startX = e.touches[0].clientX;
+    currentX = x.get();
+  };
+
+  const handleTouchMove = (e) => {
+    const delta = e.touches[0].clientX - startX;
+    let newX = currentX + delta;
+    newX = Math.max(-maxScroll, Math.min(0, newX));
+    x.set(newX);
+  };
+
+  el.addEventListener("wheel", handleWheel, { passive: false });
+  el.addEventListener("touchstart", handleTouchStart, { passive: true });
+  el.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+  return () => {
+    el.removeEventListener("wheel", handleWheel);
+    el.removeEventListener("touchstart", handleTouchStart);
+    el.removeEventListener("touchmove", handleTouchMove);
+  };
+}, [x, maxScroll]);
+
 
   return (
     <section className="bg-black min-h-screen text-white py-16 px-4 flex flex-col">
@@ -126,16 +149,13 @@ const Bundles = () => {
                 </h3>
               </div>
 
-<div className="flex flex-wrap gap-2 justify-center px-4">
+<div className="grid grid-cols-2 gap-2 px-4 w-full max-w-xs mx-auto">
   {bundle.previews.map((img, i) => (
-    <div
-      key={i}
-      className="h-28 sm:h-24 w-40 sm:w-32 overflow-hidden "
-    >
+    <div key={i} className="aspect-square overflow-hidden rounded">
       <img
         src={img}
         alt={`${bundle.category} Preview ${i + 1}`}
-        className="h-full w-full object-cover"
+        className="w-full h-full object-cover"
       />
     </div>
   ))}

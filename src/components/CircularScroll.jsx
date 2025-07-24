@@ -54,10 +54,9 @@ const CircularScroll = () => {
 
   const formCircleScale = Math.pow(formCircleProgress, 2);
   const expandScale = 1 + expandProgress * 13;
-
   const outerRotation = expandProgress * 90;
   const innerRotation = -expandProgress * 90;
-  const textOpacity = expandProgress;
+ const textOpacity = Math.max(0, Math.min(1, (expandProgress - 0.2) / 0.4));
   const textY = (1 - expandProgress) * 50;
 
   const ImageArm = ({ armArray, numArms, imageUrls, sizeClass }) => {
@@ -140,13 +139,15 @@ const CircularScroll = () => {
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             EXPLORE OUR WIDE RANGE OF BUNDLES
           </h2>
-     <Link
+<Link
   to="/bundles"
-  className="relative px-5 py-2 bg-white text-black text-xs md:text-sm tracking-wide uppercase group overflow-hidden"
+  className="relative px-5 py-2 text-black text-xs md:text-sm tracking-wide uppercase group overflow-hidden"
 >
-  <span className="relative z-10">View All Bundles</span>
-  <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
+  <span className="absolute inset-0 bg-white z-0" /> {/* White base background */}
+  <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-10" />
+  <span className="relative z-20">View All Bundles</span>
 </Link>
+
 
         </div>
       </div>

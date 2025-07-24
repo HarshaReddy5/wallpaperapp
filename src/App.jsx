@@ -25,7 +25,7 @@ import DemoShowcase from './components/DemoShowcase';
 import ScrollToTop from './components/ScrollToTop';
 import CircularScroll from './components/CircularScroll';
 import Bundles from './components/Bundles';
-import Dninja from './components/dninja';
+import Dninja from './components/Dninja';
 import Ninjas from './components/Ninjas';
 
 import './App.css';

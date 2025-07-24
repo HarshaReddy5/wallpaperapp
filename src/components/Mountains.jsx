@@ -47,7 +47,7 @@ const Mountains = () => {
           const imageUrl = `/images/mountain/${name}.webp`;
           const downloadUrl = `/images/mountain/${name}.${ext}`;
           return (
-            <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={imageUrl}
                 alt={`mountain-${idx}`}
@@ -83,7 +83,7 @@ const Mountains = () => {
       <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K MOUNTAIN WALLPAPERS</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
         {eightKWallpapers.map((file, idx) => (
-          <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
+          <div key={idx} className=" overflow-hidden bg-white/5">
             <img
               src={`/images/mountain/${file}.webp`}
               alt={`8k-mountain-${idx}`}

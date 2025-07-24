@@ -61,7 +61,7 @@ const Anime = () => {
           const webpPath = `/images/anime/${name}.webp`;
           const downloadPath = `/images/anime/${name}.${ext}`;
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`anime-${idx}`}
@@ -96,7 +96,7 @@ const Anime = () => {
         {eightKWallpapers.map(({ name, ext }, idx) => {
           const webpPath = `/images/anime/${name}.webp`;
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`8k-anime-${idx}`}

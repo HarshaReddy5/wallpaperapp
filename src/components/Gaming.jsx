@@ -56,7 +56,7 @@ const Gaming = () => {
           const downloadPath = `/images/gaming/${name}.${ext}`;
 
           return (
-            <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`gaming-${idx}`}
@@ -92,7 +92,7 @@ const Gaming = () => {
           const webpPath = `/images/gaming/${name}.webp`;
 
           return (
-            <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`8k-gaming-${idx}`}

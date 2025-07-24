@@ -47,7 +47,7 @@ const Scifi = () => {
           const webpPath = `/images/scifi/${name}.webp`;
           const pngPath = `/images/scifi/${name}.png`;
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`scifi-${idx}`}
@@ -85,7 +85,7 @@ const Scifi = () => {
         {eightKImageNames.map((name, idx) => {
           const webpPath = `/images/scifi/${name}.webp`;
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className="overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`8k-scifi-${idx}`}

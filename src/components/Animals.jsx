@@ -2,7 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const animalImageNames = ['animal1', 'animal2', 'animal7'];
-const animal8KImageNames = ['animal3', 'animal4', 'animal5', 'animal6', 'animal8'];
+const animal8KImageNames = ['animal3', 'animal4', 'animal5', 'animal6', 'animal8', 'a9', 'a10', 'a11', 'a12', 'a13'
+ , 'a14', 'a15', 'a16', 'a17', 'a18'  , 'a19', 'a20', 'a21', 'a22', 'a23', 'a24', 'a25', 'a26',
+];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -45,7 +47,7 @@ const Animals = () => {
           const webpPath = `/images/animals/${name}.webp`;
           const pngPath = `/images/animals/${name}.png`;
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`animal-${idx}`}
@@ -83,7 +85,7 @@ const Animals = () => {
         {animal8KImageNames.map((name, idx) => {
           const webpPath = `/images/animals/${name}.webp`;
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`8k-animal-${idx}`}

@@ -96,7 +96,7 @@ const Spiderman = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
         {eightKWallpapers.map(({ preview }, idx) => (
-          <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
+          <div key={idx} className=" overflow-hidden bg-white/5">
             <img
               src={preview}
               alt={`8k-preview-${idx}`}

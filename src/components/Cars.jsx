@@ -51,7 +51,7 @@ const Cars = () => {
           const webpPath = `/images/cars/${name}.webp`;
           const downloadPath = `/images/cars/${name}.${ext}`;
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`car-${idx}`}
@@ -86,7 +86,7 @@ const Cars = () => {
         {eightKImageNames.map((name, idx) => {
           const webpPath = `/images/cars/${name}.webp`;
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`8k-car-${idx}`}

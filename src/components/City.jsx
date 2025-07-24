@@ -51,7 +51,7 @@ const City = () => {
           const downloadPath = `/images/city/${name}.${ext}`;
 
           return (
-            <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`city-${idx}`}
@@ -87,7 +87,7 @@ const City = () => {
           const webpPath = `/images/city/${name}.webp`;
 
           return (
-            <div key={idx} className="border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpPath}
                 alt={`8k-city-${idx}`}

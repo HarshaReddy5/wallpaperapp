@@ -25,6 +25,8 @@ import DemoShowcase from './components/DemoShowcase';
 import ScrollToTop from './components/ScrollToTop';
 import CircularScroll from './components/CircularScroll';
 import Bundles from './components/Bundles';
+import Dninja from './components/dninja';
+import Ninjas from './components/Ninjas';
 
 import './App.css';
 
@@ -51,12 +53,12 @@ function App() {
           element={
             <>
               <Hero />
+      
                   <DemoShowcase />
-                  
-      <CircularScroll />
-   
-              <Morec />
-              <Request />
+                     <CircularScroll />
+                         <Dninja />
+                         <Morec />
+                               <Request />
             </>
           }
         />
@@ -74,6 +76,7 @@ function App() {
         <Route path="/spiderman" element={<Spiderman />} />
         <Route path="/city" element={<City />} />
            <Route path="/bundles" element={<Bundles />} />
+           <Route path="/ninjas" element={<Ninjas />} />
       </Routes>
 
       <StickyCategoryBar />

@@ -51,7 +51,7 @@ const Space = () => {
         {regularWallpapers.map(({ name, ext }, idx) => (
           <div
             key={idx}
-            className="rounded-xl border border-white/10 overflow-hidden bg-white/5"
+            className=" overflow-hidden bg-white/5"
           >
             <img
               src={`/images/space/${name}.webp`}

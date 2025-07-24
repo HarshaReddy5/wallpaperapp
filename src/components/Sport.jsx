@@ -63,7 +63,7 @@ const Sport = () => {
           const downloadSrc = `/images/sport/${name}.${ext}`;
 
           return (
-            <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+            <div key={idx} className=" overflow-hidden bg-white/5">
               <img
                 src={webpSrc}
                 alt={name}
@@ -95,7 +95,7 @@ const Sport = () => {
       <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center mt-20">8K SPORT WALLPAPERS</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-14">
         {eightKWallpapers.map((name, idx) => (
-          <div key={idx} className="rounded-xl border border-white/10 overflow-hidden bg-white/5">
+          <div key={idx} className=" overflow-hidden bg-white/5">
             <img
               src={`/images/sport/${name}.webp`}
               alt={`8k-sport-${idx}`}

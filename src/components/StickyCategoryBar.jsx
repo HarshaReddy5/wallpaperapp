@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 const allCategories = [
-  "Animals", "Anime", "Abstract", "Cars", "City",
+  "Animals", "Anime", "Abstract", "Cars", "City","Gaming",
   "Mountains", "Scifi", "Space",
   "Sport", "Technology"
 ];
@@ -14,9 +14,8 @@ const categoryRoutes = {
   Abstract: "/abstract",
   Cars: "/automotive",
   City: "/city",
-  Mountains: "/nature",
-
-
+  Gaming: "/Gaming",
+  Mountains: "/nature", 
   Scifi: "/futuristic",
   Space: "/space",
   Sport: "/sport",

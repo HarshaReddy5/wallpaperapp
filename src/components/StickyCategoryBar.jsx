@@ -1,25 +1,33 @@
+// src/components/StickyCategoryBar.js
+
 import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
+import { motion } from "framer-motion"; // ✨ 1. Import motion
 
 const allCategories = [
   "Animals", "Anime", "Abstract", "Cars", "City","Gaming",
-  "Mountains", "Scifi", "Space",
-  "Sport", "Technology"
+  "Mountains", "Scifi", "Space", "Sport", "Technology"
 ];
 
-// Mapping each category to your route pattern
 const categoryRoutes = {
-  Animals: "/animals",
-  Anime: "/anime",
-  Abstract: "/abstract",
-  Cars: "/automotive",
-  City: "/city",
-  Gaming: "/Gaming",
-  Mountains: "/nature", 
-  Scifi: "/futuristic",
-  Space: "/space",
-  Sport: "/sport",
-  Technology: "/technology"
+  Animals: "/animals", Anime: "/anime", Abstract: "/abstract",
+  Cars: "/automotive", City: "/city", Gaming: "/Gaming",
+  Mountains: "/nature", Scifi: "/futuristic", Space: "/space",
+  Sport: "/sport", Technology: "/technology"
+};
+
+// ✨ 2. Define the animation variant for the bar
+const slideInFromBottom = {
+  hidden: { y: 100, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+      delay: 0.8, // Delay to make it appear after the main hero animation
+    },
+  },
 };
 
 const StickyCategoryBar = () => {
@@ -31,7 +39,13 @@ const StickyCategoryBar = () => {
   const visibleCategories = showMore ? allCategories : allCategories.slice(0, 3);
 
   return (
-    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-[600px] px-4 py-3 shadow-xl backdrop-blur-lg bg-black/50 rounded-md">
+    // ✨ 3. Convert the root div to a motion.div and apply the animation
+    <motion.div
+      className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-[600px] px-4 py-3 shadow-xl backdrop-blur-lg bg-black/50 rounded-md"
+      variants={slideInFromBottom}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="flex flex-wrap justify-center items-center gap-3 max-h-[300px] overflow-y-auto">
         
         {/* Non-interactive Title */}
@@ -62,7 +76,7 @@ const StickyCategoryBar = () => {
           <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

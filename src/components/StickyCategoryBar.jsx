@@ -5,15 +5,15 @@ import { useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion"; // ✨ 1. Import motion
 
 const allCategories = [
-  "Animals", "Anime", "Abstract", "Cars", "City","Gaming",
-  "Mountains", "Scifi", "Space", "Sport", "Technology"
+  "Animals", "Anime", "Abstract", "Cars", "City","Gaming", "Ninjas",
+  "Mountains", "Scifi", "Space", "Sport", "Futuristic"
 ];
 
 const categoryRoutes = {
   Animals: "/animals", Anime: "/anime", Abstract: "/abstract",
-  Cars: "/automotive", City: "/city", Gaming: "/Gaming",
+  Cars: "/automotive", City: "/city", Gaming: "/Gaming", Ninjas: "/ninjas",
   Mountains: "/nature", Scifi: "/futuristic", Space: "/space",
-  Sport: "/sport", Technology: "/technology"
+  Sport: "/sport", Futuristic: "/technology"
 };
 
 // ✨ 2. Define the animation variant for the bar
@@ -41,7 +41,7 @@ const StickyCategoryBar = () => {
   return (
     // ✨ 3. Convert the root div to a motion.div and apply the animation
     <motion.div
-      className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-[600px] px-4 py-3 shadow-xl backdrop-blur-lg bg-black/50 rounded-md"
+      className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-[600px] px-4 py-3 shadow-xl backdrop-blur-lg bg-black/10 rounded-md"
       variants={slideInFromBottom}
       initial="hidden"
       animate="visible"

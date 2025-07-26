@@ -31,18 +31,7 @@ const Request = () => {
         HAVE REQUESTS?
       </motion.h2>
 
-      {/* Button */}
-      <motion.button
-        className="relative px-6 py-2 bg-white text-black  text-sm tracking-wide uppercase group overflow-hidden mb-14"
-       
-        variants={fadeUp}
-        initial="hidden"
-        animate={controls}
-      >
-        <span className="relative z-10">Contact Now </span>
-        <span className="absolute left-0 top-0 h-full w-0 bg-[#ff7300] transition-all duration-500 ease-in-out group-hover:w-full z-0" />
-      </motion.button>
-
+    
       {/* Image */}
       <motion.div
         className="mx-auto mb-10 w-[320px] md:w-[400px] h-[450px] overflow-hidden"
@@ -65,7 +54,7 @@ const Request = () => {
         initial="hidden"
         animate={controls}
       >
-        About Me
+    Contact me on
       </motion.p>
 
       {/* Socials */}
@@ -76,8 +65,6 @@ const Request = () => {
         animate={controls}
       >
         <a href="https://www.instagram.com/8kwallpaperarea?igsh=ajZnc2lydXR1OHQ5" className="hover:text-[#ff7300] transition">Instagram ↗</a>
-        <a href="#" className="hover:text-[#ff7300] transition">Dribbble ↗</a>
-        <a href="#" className="hover:text-[#ff7300] transition">Twitter ↗</a>
       </motion.div>
 
       {/* Footer */}
@@ -87,7 +74,7 @@ const Request = () => {
         initial="hidden"
         animate={controls}
       >
-        <h1>©2025 WALLPAPER AREA</h1>
+        <h1>©2025 8K WALLPAPER AREA</h1>
       </motion.div>
     </section>
   );

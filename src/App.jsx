@@ -28,6 +28,7 @@ import Bundles from './components/Bundles';
 import Dninja from './components/Dninja';
 import Ninjas from './components/Ninjas';
 
+
 import './App.css';
 
 // ✅ Google Analytics page tracking hook
@@ -53,9 +54,10 @@ function App() {
           element={
             <>
               <Hero />
-      
+    
                   <DemoShowcase />
                      <CircularScroll />
+                    
                          <Dninja />
                          <Morec />
                                <Request />

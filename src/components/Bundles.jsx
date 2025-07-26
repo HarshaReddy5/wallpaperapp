@@ -27,11 +27,23 @@ const bundles = [
     link: "https://harshared.lemonsqueezy.com/buy/985b9ed2-fdcc-4db4-82ef-d2dcb34866ce",
     previewLink: "/city",
   },
+    {
+    category: "Futuristic",
+    previews: ["/images/futuristic/f1.webp","/images/futuristic/f5.webp","/images/futuristic/f9.webp","/images/futuristic/f15.webp"],
+    link: "https://harshared.lemonsqueezy.com/buy/02378b9a-5763-4d11-ad01-4aea096bd00e",
+    previewLink: "/technology",
+  },
   {
     category: "Gaming",
     previews: ["/images/gaming/gaming13.webp","/images/gaming/gaming5.webp","/images/gaming/gaming8.webp","/images/gaming/gaming9.webp"],
     link: "https://harshared.lemonsqueezy.com/buy/a4e2a143-3c25-4a02-a3c8-aa17214bce71",
     previewLink: "/gaming",
+  },
+    {
+    category: "Ninja",
+    previews: ["/images/3dninja/ab1.webp","/images/3dninja/ab5.webp","/images/3dninja/ab8.webp","/images/3dninja/ab7.webp"],
+    link: "https://harshared.lemonsqueezy.com/buy/6f870a36-1ae9-4b19-a693-2b6717c8f273",
+    previewLink: "/ninjas",
   },
   {
     category: "Mountains",
@@ -58,7 +70,7 @@ const bundles = [
     previewLink: "/sport",
   },
   {
-    category: "Full 8K Bundle",
+    category: "Full 8K-Includes all",
     previews: ["/images/spiderman/sp11.webp", "/images/sport/sport3.webp","/images/mountain/m7.webp","/images/gaming/gaming8.webp"],
     link: "https://harshared.lemonsqueezy.com/buy/b087bb72-ea00-450a-885f-c8080a3049c8",
     previewLink: "/subscribe",

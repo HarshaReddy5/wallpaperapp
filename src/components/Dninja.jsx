@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 const ninjas = [
   {
     id: 1,
-    name: 'SHADOW NINJA',
+    name: 'SHADOW',
     icon: '🌑',
     image: '/images/3dninja/abwb7.webp',
     bg: '/images/3dninja/bg1.webp',
@@ -14,7 +14,7 @@ const ninjas = [
   },
   {
     id: 2,
-    name: 'FIRE NINJA',
+    name: 'FIRE',
     icon: '🔥',
     image: '/images/3dninja/abwb9.webp',
     bg: '/images/3dninja/bg2.webp',
@@ -22,7 +22,7 @@ const ninjas = [
   },
   {
     id: 3,
-    name: 'ICE NINJA',
+    name: 'ICE',
     icon: '❄️',
     image: '/images/3dninja/abwb14.webp',
     bg: '/images/3dninja/bg3.webp',
@@ -30,7 +30,7 @@ const ninjas = [
   },
   {
     id: 4,
-    name: 'STORM NINJA',
+    name: 'STORM',
     icon: '⚡',
     image: '/images/3dninja/abwb2.webp',
     bg: '/images/3dninja/bg4.webp',
@@ -38,7 +38,7 @@ const ninjas = [
   },
   {
     id: 5,
-    name: 'LIGHTNING NINJA',
+    name: 'LIGHTNING',
     icon: '⚡',
     image: '/images/3dninja/abwb13.webp',
     bg: '/images/3dninja/bg5.webp',
@@ -46,7 +46,7 @@ const ninjas = [
   },
   {
     id: 6,
-    name: 'STONE NINJA',
+    name: 'STONE',
     icon: '🪨',
     image: '/images/3dninja/abwb16.webp',
     bg: '/images/3dninja/bg6.webp',
@@ -54,7 +54,7 @@ const ninjas = [
   },
   {
     id: 7,
-    name: 'VENOM NINJA',
+    name: 'VENOM',
     icon: '🐍',
     image: '/images/3dninja/abwb1.webp',
     bg: '/images/3dninja/bg7.webp',
@@ -62,7 +62,7 @@ const ninjas = [
   },
   {
     id: 8,
-    name: 'LOVE NINJA',
+    name: 'LOVE',
     icon: '💘',
     image: '/images/3dninja/abwb24.webp',
     bg: '/images/3dninja/bg8.webp',

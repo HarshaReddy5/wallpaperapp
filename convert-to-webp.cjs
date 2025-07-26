@@ -3,7 +3,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const inputDir = './public/images/3dninja'; // Change this if your images are in a different folder
+const inputDir = './public/images/futuristic'; // Change this if your images are in a different folder
 
 function convertImages(dir) {
   fs.readdirSync(dir).forEach(file => {
